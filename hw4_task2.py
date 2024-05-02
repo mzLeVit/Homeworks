@@ -23,6 +23,5 @@ def read_cats_data(file_path):
         print(f"Помилка: {e}")
     return cats_list
 
-file_path = "cats.txt"
-cats = read_cats_data(file_path)
+cats = read_cats_data('./cats.txt')
 print(cats)
