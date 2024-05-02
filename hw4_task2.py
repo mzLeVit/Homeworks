@@ -1,9 +1,9 @@
 from pathlib import Path
 file_c = Path('cats.txt')
-def read_cats_data(file_path):
+def get_cats_info(path):
     cats_list = []
     try:
-        with open(file_path, 'r', encoding='utf-8') as file:
+        with open(path, 'r', encoding='utf-8') as file:
             for line in file:
                 try:
                     id, name, age = line.strip().split(',')
@@ -23,5 +23,5 @@ def read_cats_data(file_path):
         print(f"Помилка: {e}")
     return cats_list
 
-cats = read_cats_data('./cats.txt')
+cats = get_cats_info('./cats.txt')
 print(cats)
